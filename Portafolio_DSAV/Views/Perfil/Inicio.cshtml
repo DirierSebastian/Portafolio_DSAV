@@ -1,0 +1,23 @@
+﻿@model List<PerfilModel>;
+@{
+    ViewData["Title"] = "Inicio";
+}
+<link rel="stylesheet" href="~/css/Perfil.css" asp-append-version="true" />
+<div class="container">
+    <h1 class="titulo">Portafolio</h1>
+    @foreach (var item in Model)
+    {
+        <div>
+            <p class="cuerpo">Nombre: @item.nombre</p>
+            <p class="cuerpo">Edad: @item.edad</p>
+            <p class="cuerpo">Web: @item.Web</p>
+            <p class="cuerpo">Movil: @item.Movil</p>
+            <p class="cuerpo">BD: @item.BD</p>
+            <p class="cuerpo">Lenguaje: @item.lenguaje</p>
+        </div>
+    }
+    <div>
+        <p class="cuerpo">Sobre mi:</p>
+        <h5 class="cuerpo">Estudiante de programacion con lenguaje principal C#. Soy Fullstack</h5>
+    </div>
+</div>

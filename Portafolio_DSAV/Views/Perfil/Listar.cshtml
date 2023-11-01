@@ -1,0 +1,19 @@
+﻿@model List<PerfilModel>;
+@{
+    ViewData["Title"] = "Listar";
+}
+<div class="card col-8">
+    <div class="card-header">
+        Lista de perfil
+    </div>
+</div>
+<div class="card-body">
+    @foreach (var item in Model)
+    {
+        <div>
+            <p>Name: @item.nombre</p>
+            <p>Email: @item.edad</p>
+            <p>Lenguaje> @item.lenguaje</p>
+        </div>
+    }
+</div>

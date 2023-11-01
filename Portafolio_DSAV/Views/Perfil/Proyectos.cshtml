@@ -1,0 +1,17 @@
+﻿@model GithubModel
+@{
+    ViewData["Title"] = "Proyecto";
+}
+<link rel="stylesheet" href="~/css/Base.css" asp-append-version="true" />
+<div class="container">
+    <div>
+        <h1 class="titulo">Proyectos</h1>
+    </div>
+    @foreach (var repository in Model.Repositories){
+    <div>
+        <h3 class="titulo"> @repository.RepositoryName</h3>
+        <p class="cuerpo">Descripción: @repository.RepositoryDescription</p>
+        <p class="cuerpo">Link: <a href="@repository.RepositoryUrl">@repository.RepositoryUrl</a></p>
+    </div>
+    }
+</div>
